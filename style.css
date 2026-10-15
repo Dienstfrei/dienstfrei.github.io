@@ -1,0 +1,78 @@
+:root {
+  --bg: #F4FAFB;
+  --card: #FFFFFF;
+  --line: #DCEBEE;
+  --ink: #10303A;
+  --muted: #4F6B74;
+  --teal: #0B7C7A;
+  --teal-soft: #EEF9F8;
+  --link: #0B7C7A;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0E1A1F;
+    --card: #16262C;
+    --line: #273B42;
+    --ink: #E6F1F3;
+    --muted: #9DB4BB;
+    --teal: #108F89;
+    --teal-soft: #123333;
+    --link: #6FD6CE;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+a { color: var(--link); }
+header {
+  background: var(--teal);
+  color: #fff;
+  padding: 20px 16px;
+}
+header .inner, main, footer { max-width: 760px; margin: 0 auto; }
+header .inner { display: flex; align-items: center; gap: 14px; }
+header img { width: 48px; height: 48px; border-radius: 12px; }
+header a { color: #fff; text-decoration: none; font-weight: 700; font-size: 20px; }
+main { padding: 24px 16px 8px; }
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 4px; }
+h2 { font-size: 20px; margin: 32px 0 8px; }
+.meta { color: var(--muted); margin: 0 0 20px; }
+.summary {
+  background: var(--teal-soft);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 4px 18px 8px;
+}
+.summary h2 { margin-top: 14px; }
+.address {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 12px 16px;
+}
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+.table-wrap { overflow-x: auto; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+  font-size: 15px;
+}
+th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 600; background: var(--teal-soft); }
+tr:last-child td { border-bottom: 0; }
+footer { padding: 24px 16px 40px; color: var(--muted); font-size: 14px; }
+.hero { text-align: center; padding: 40px 0 16px; }
+.hero img { width: 112px; height: 112px; border-radius: 26px; }
+.hero p { color: var(--muted); font-size: 18px; max-width: 520px; margin: 8px auto 0; }
+.facts { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); margin: 28px 0; }
+.fact { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 14px 16px; }
+.fact b { display: block; }
